@@ -150,7 +150,7 @@ opacityScale.domain(d3.extent(links,function(d){return d.valor}));
 		  .append("title")
 		  .html(function(d){
 			  if(d.total){
-			  return "Contratos :" + d.valor + "<br>" + "Valor Total : " + d3.format("$,r")(d.total);
+			  return "Contratos :" + d.valor + "\n" + "Valor Total : " + d3.format("$,r")(d.total);
 			  }else {
 				  return "No Disponible";
 			  }
