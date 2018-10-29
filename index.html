@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">        
+        <title>10oContratos</title>
+        
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+        <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>        
+                
+    </head>
+    <body>        
+        <div class="container">
+            <header>
+            </header>
+            
+            <h1>LOS 100 MAS GRANDES CONTRATOS DE COLOMBIA</h1> 
+            <h3>EN MANOS DE QUIEN Y POR CUAL CUANTIA?</h3>
+                    
+          
+				<p>
+    Con información obtenida del portal de transparencia económica,
+    <a href="http://www.pte.gov.co/WebsitePTE/" target="_blank">
+        http://www.pte.gov.co/WebsitePTE/
+    </a>
+    , en esta grafica de redes se muestra como se relacionan los sectores
+    económicos, entidades de del gobierno y beneficiarios de los 100 contratos
+    más grandes de Colombia en el año 2018, con recursos del presupuesto
+    general de la nación.
+</p>
+<p>
+    · ¿Qué Sectores ecónomos se llevan la mayor parte de los recursos de la
+    nación?
+</p>
+<p>
+    · ¿Qué entidades del Estado manejan los contratos más cuantiosos del país?
+</p>
+<p>
+    · ¿Quienes son los beneficiarios de estos contratos?
+</p>
+<p>
+    Con esta visualización se podrá encontrar muchos datos interesantes sobre
+    el manejo del presupuesto de la nación a grandes escalas, ya que estamos
+    hablando de un presupuesto de más de 24 billones de pesos en contratos 
+	($24.948.698.413.772).
+</p>
+<p>
+    La fuente de datos se encuentra en este link:
+    <a
+        href="http://www.pte.gov.co/WebsitePTE/ContratosMasGrandes"
+        target="_blank"
+    >
+        http://www.pte.gov.co/WebsitePTE/ContratosMasGrandes
+    </a>
+</p>
+            </p>
+            <hr noshade size="1">
+            <div id="button_wrapper">
+                <h4> Seleccione el tipo de layout: </h4>
+                <button type="button" class="btn" id="radial">Radial  </button>                
+                <button type="button" class="btn" id="lineal">Lineal  </button>
+                
+            </div>
+                        
+            <svg id="svg" width="1320" height="700" class="grafica"></svg>
+            <script src="js/contrato.js"></script> 
+            
+            <p class="main-text">
+            
+          <p><strong>Abstracci&oacute;n WHAT- WHY &ndash; HOW :</strong></p>
+<p>&nbsp;El data set corresponde al listado de los 100 contratos m&aacute;s grandes con recursos del PGN de Colombia, para el a&ntilde;o 2018.</p>
+<p>&nbsp;Descripci&oacute;n de acuerdo con FrameWork de Tamara Munzner:</p>
+<p>&nbsp;<strong>WHAT:</strong></p>
+<ul>
+<li>Data and Dataset Types:
+<ul>
+<li>Data Set Taype : Networks: Nodos y Links:
+<ul>
+<li>Data Set con 100 &Iacute;tems y 8 Atributos.</li>
+<li>Atributos usados en la Visualizaci&oacute;n:
+<ul>
+<li>Nombre del Sector: Categ&oacute;rico.
+<ul>
+<li>Corresponde al sector econ&oacute;mico al cual se le asigna presupuesto para contrataci&oacute;n.</li>
+<li>En total hay 22 Sectores econ&oacute;micos.&nbsp;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Entidad: Categ&oacute;rico.
+<ul>
+<li>Corresponde a la entidad del Estado con presupuesto de contrataci&oacute;n.</li>
+<li>En total hay 30 Entidades beneficiadas.&nbsp;</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Beneficiario: Categ&oacute;rico.
+<ul>
+<li>Corresponde a los beneficiarios de los contratos.</li>
+<li>En total hay 68 Beneficiarios de los mas grandes contratos de Colombia.&nbsp;</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Valor Contrato: Ordenado-&gt; Cuantitativo -&gt; Secuencial
+<ul>
+<li>Corresponde al presupuesto asignado por contrato.&nbsp;</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Nodos: Sector &ndash; Entidad &ndash; Beneficiario.&nbsp;</li>
+</ul>
+<ul>
+<li>Links: Paths o relaciones entre nodos por asignaci&oacute;n de contratos y presupuesto.&nbsp;</li>
+</ul>
+<ul>
+<li>En cumplimiento de las tareas se deriva un atributo Ordenado, cuantitativo, secuencial: N&uacute;mero de contratos.</li>
+</ul>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Representa la cantidad de contratos por Sector econ&oacute;mico asignados a las Entidades del Estado, y la cantidad de Contratos asignados por una Entidad a los Beneficiarios de estos.</p>
+<ul>
+<li>Cada registro corresponde a cada uno de los contratos asignados.&nbsp;</li>
+</ul>
+<p><strong>WHY:</strong></p>
+<ul>
+<li>Tarea Principal:
+<ul>
+<li>&iquest;Qu&eacute; Sectores ec&oacute;nomos se llevan la mayor parte de los recursos de la naci&oacute;n y a que entidades se los asignan?</li>
+<li>&iquest;Qu&eacute; entidades del Estado manejan los contratos m&aacute;s cuantiosos del pa&iacute;s y qui&eacute;nes son sus beneficiarios?</li>
+<li>&iquest;Hay beneficiarios de m&aacute;s de un contrato?</li>
+</ul>
+</li>
+<li>Tarea Secundaria:
+<ul>
+<li>&iquest;Qui&eacute;nes son los beneficiarios de estos contratos?</li>
+<li>&iquest;Hay entidades que se vean claramente favorecidas con la asignaci&oacute;n de presupuesto?</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;De acuerdo con el framework de Tamara, las tareas propuestas por el usuario se logran realizar de mejor manera mediante una visualizaci&oacute;n que permita:&nbsp;&nbsp;</p>
+<ul style="list-style-type: circle;">
+<li>
+<ul>
+<li>Query-&gt;Identificar -&gt; Network Data - &gt;Paths :
+<ul>
+<li>Identificar las relaciones entre los nodos en la asignaci&oacute;n de contratos.</li>
+</ul>
+</li>
+<li>Query -&gt; Summarize -&gt; Network Data -&gt; Topology :
+<ul>
+<li>Ver el comportamiento global de las relaciones entre Sectores econ&oacute;micos, Entidades, Beneficiarios y la distribuci&oacute;n general del presupuesto en materia de contrataci&oacute;n.</li>
+</ul>
+</li>
+<li>Search -&gt; Explore -&gt; Network Data - &gt;&nbsp;&nbsp;&nbsp; Topology :</li>
+<li>Encontrar relaciones inicialmente no se pensaban o no en esa magnitud.&nbsp;</li>
+<li>Search -&gt; Locate -&gt; Network Data - &gt; Paths y Clusters :
+<ul>
+<li>Buscar relaciones caracter&iacute;sticas y agrupaciones entre beneficiarios y entidades el el manejo de los contratos.&nbsp;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>HOW:</strong></p>
+<ul>
+<li>Las tareas planteadas se logran cumplir mediante los siguientes IDIOMS:</li>
+</ul>
+<p><strong>&nbsp;</strong><strong>Visualizacion de Netwrok Data mediante Node&nbsp; link Digrams: Diagrama de Fuerzas.</strong></p>
+<ul style="list-style-type: circle;">
+<li>Marcas:
+<ul>
+<li>Puntos que representan nodos. (Sector &ndash; Entidad &ndash; Beneficiario)</li>
+<li>Connection Marks - Links representa la relaci&oacute;n entre nodos.</li>
+<li>L&iacute;neas conectan los nodos entre s&iacute;.</li>
+</ul>
+</li>
+<li></li>
+<li>Canales:&nbsp;
+<ul>
+<li>Nodos: Sector &ndash; Entidad - Beneficiarios
+<ul>
+<li>Identity Chanel: Color Hue.</li>
+<li>Identity Chanel: Shape Circle.&nbsp;</li>
+</ul>
+</li>
+<li>Atributo ordenado cuantitativo Valor Contrato:
+<ul>
+<li>Magnitude Chanel: Area
+<ul>
+<li>El ancho del enlace determina el presupuesto asignado, mas ancho el enlace m&aacute;s presupuesto.&nbsp;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Atributo ordenado cuantitativo N&uacute;mero de contratos:
+<ul>
+<li>Magnitude Chanel: Color Luminance
+<ul>
+<li>El nivel de luminiscencia indica la cantidad de contaras en el link, m&aacute;s luminiscencia m&aacute;s contratos.&nbsp;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Encode
+<ul>
+<li>Separate, order : Disposici&oacute;n Radial de los nodos y lineal en el eje horizontal.</li>
+</ul>
+</li>
+<li>Facet:
+<ul>
+<li>Algunas relaciones quedan superpuestas debido a las fuerzas de atracci&oacute;n entre los nodos.</li>
+</ul>
+</li>
+<li>Manipulate
+<ul>
+<li>Select : Selecci&oacute;n de Nodos y Links proporciona informaci&oacute;n relacionada.</li>
+</ul>
+</li>
+</ul>
+<p>&nbsp;<strong>INSIGHTS VISUALIZACION:</strong><strong>&nbsp;</strong></p>
+<ul>
+<li>El Sector econ&oacute;mico que se lleva el mayor presupuesto en el 2018 es la educaci&oacute;n, a trav&eacute;s del ministerio de educaci&oacute;n nacional con mas de 3 billones de pesos en contratos. Esto a que ya no va tanto presupuesto al sector defensa por el desecamiento del conflicto armado en el pa&iacute;s.</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Los contratos de educci&oacute;n, los m&aacute;s cuantiosos, son manejados por Fiduciarias en su mayor porcentaje como el caso de la Fiduciaria la Previsora con una asignaci&oacute;n de m&aacute;s de dos billones de pesos.</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>El sector transporte tambi&eacute;n tiene participaci&oacute;n en contratos por cerca de 2 billones de pesos, asignados a tres entidades a la Agencia nacional de infraestructura, instituto nacional de v&iacute;as y la Aeron&aacute;utica civil, quien a su vez tiene un &uacute;nico beneficiario el consorcio el Eden.</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li>Dato curioso en el sector Presidencia de la republica con un presupuesto de mas de 380 mil millones de pesos que gestiona a trav&eacute;s de consorcio FCP (Fondo Colombia En Paz) de que a su vez hace parte la Fiduciaria la Previsora quien tiene los contratos de sector educaci&oacute;n (esto &uacute;ltimo consultado de la p&aacute;gina de la previsora - http://www.fiduprevisora.com.co/seccion/fondo-colombia-en-paz.html).</li>
+</ul>
+            
+            <hr noshade size="1">
+            <footer>
+                <p><strong>Contratacion en Colombia 2018</strong> 
+                    <a href="https://github.com/jairoruizsaenz" target="_blank">Jairo Ruiz Saenz</a>  -  
+                    <a href="https://github.com/jairoruizsaenz/Relaciones-Peliculas" target="_blank">Ver Repositorio</a> -
+                       Fecha de actualización: 23/10/2017</p>
+                <p>Publicado con <a href="https://pages.github.com" target="_blank">GitHub Pages</a></p>                        
+            </footer>
+        </div>
+    </body>
+</html>
